@@ -5,6 +5,8 @@
 .card {
     border-radius: 0;
     border: none;
+    background-color: #000000;
+    color: #ffffff;
 }
 
 .summary-item {
@@ -24,6 +26,7 @@ button {
 @media (min-width: 576px) {
     body {
         padding-top: 15px;
+        background-color: #000000;
     }
 
     .main-container {

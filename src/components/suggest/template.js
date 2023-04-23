@@ -22,18 +22,18 @@ const template = (context) => {
   return context.api.getSuggestedSymptoms(context.data).then((suggestedSymptoms) => {
     if (!suggestedSymptoms.length) {
       document.getElementById('next-step').click();
-      return '<p><i class="fa fa-circle-o-notch fa-spin fa-fw"></i> I am thinking...</p>';
+      return '<p><i class="fa fa-circle-o-notch fa-spin fa-fw"></i> Estou pensando ...</p>';
     }
     return html`
-      <h5 class="card-title">Do you have any of the following symptoms?</h5>
+      <h5 class="card-title">Algum dos sintomas abaixo?</h5>
       <div class="card-text">
         <form>
           ${symptomHtmlMapper(suggestedSymptoms)}
         </form>
         <p class="text-muted small">
           <i class="fa fa-info-circle"></i>
-          This is a list of symptoms suggested by our AI,
-          based on the information gathered so far during the interview.
+          Essa é uma lista de sintomas sugerida pela nossa IA 
+          baseado nas informações iniciais da entrevista.
         </p>
       </div>
     `;

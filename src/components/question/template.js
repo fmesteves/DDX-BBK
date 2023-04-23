@@ -41,9 +41,9 @@ const answersGroupMultiple = (items) => {
 const answersSingle = () => {
   return html`
     <div>
-      <button type="button" data-value="true" class="next-question btn btn-success">Yes</button>
-      <button type="button" data-value="false" class="next-question btn btn-danger">No</button>
-      <button type="button" data-value="unknown" class="next-question btn btn-info">Skip question</button>
+      <button type="button" data-value="true" class="next-question btn btn-success">Sim</button>
+      <button type="button" data-value="false" class="next-question btn btn-danger">Não</button>
+      <button type="button" data-value="unknown" class="next-question btn btn-info">Pular pergunta</button>
     </div>
   `;
 };
@@ -60,7 +60,7 @@ const template = (context) => {
       <div class="card-text">
         ${mapper[context.question.type](context.question.items)}
         ${context.question.type !== 'single'
-    ? '<button class="next-question btn btn-primary">Next question</button>' : ''}
+    ? '<button class="next-question btn btn-primary">Próxima pergunta</button>' : ''}
       </div>
     `);
   });
